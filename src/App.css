@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+.divi
+{
+width:100%;
+height:100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+video
+{
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.div{
+ 
+  width:400px;
+  height:550px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.container 
+{
+position:absolute;
+width:100%;
+height:100%;
+top:60%;
+left:50%;
+transform:translate(-50%,-50%);
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+.links
+{
+  display:flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+}
+.links a
+{
+  margin: 25px 0;
+  font-size: 1em;
+  color: #8f8f8f;
+  text-decoration:none;
+}
+.logo-container {
+  margin-bottom: 15px;
+}
+.logo-img {
+  width: 130px;
+  height: auto;
+  border-radius:70px;
 }
 
-.App-link {
-  color: #61dafb;
+.body{
+  background-image: url("https://getwallpapers.com/wallpaper/full/f/9/d/1108511-blue-purple-wallpaper-1920x1200-for-android.jpg");
+  height:100vh;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+.photo
+{
+  height:200px;
+  width:200px;
+  border-radius: 100px;
+}
+.home
+{
+  color: aqua;
+}
+.about
+{
+  color: aqua;
+}
+.contact
+{
+  color: aqua;
+}
+.services-list {
+  list-style-type: none;
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.services-list li::before {
+  content: "●";
+  color:aliceblue;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.about-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-list li::before {
+  content: "●";
+  color:aliceblue;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.body1
+{
+  text-decoration:underline;
+  text-shadow: azure;
+}
+.default
+{
+  height:200px;
+  width:200px;
 }
