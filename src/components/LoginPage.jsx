@@ -4,7 +4,8 @@ import { Button, Paper, TextField } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 
-const LoginPage = () => {
+const LoginPage = () => {                       
+  //usestate is used to update the state of the component
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [nameError, setNameError] = useState(false);
@@ -22,6 +23,8 @@ const LoginPage = () => {
     } else {
       setPasswordError(false);
     }
+    //above four conditions checks the error.
+    //instead of link tag using navigate.
     if (name.trim() && password.trim()) {
       navigate("/dashboard");
       console.log("Submitted:", name, password);
@@ -29,12 +32,15 @@ const LoginPage = () => {
   }
   
   return (
+    
     <div className="divi">
       <video src={video} autoPlay loop muted />
       <center>
         <br></br>
+        
         <div className="container">
           <h1 style={{ color: "whitesmoke" }}>LOGIN</h1>
+          
           <Paper elevation={10} square className="div" style={{ backgroundColor: "silver" }}>
             <br></br>
             <div className="logo-container">

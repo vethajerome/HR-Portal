@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
-import employeeData from "../../Array1";
+import employeeData from "./Array1";
 
 function Employee() {
   const params = useParams();
