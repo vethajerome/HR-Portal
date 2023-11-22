@@ -3,7 +3,6 @@ import video from '../assests/video.mp4';
 import { Button, Paper, TextField } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import { Navigate } from "react-router-dom";
-
 const LoginPage = () => {                       
   //usestate is used to update the state of the component
   const [name, setName] = useState('');
@@ -30,9 +29,7 @@ const LoginPage = () => {
       console.log("Submitted:", name, password);
     }
   }
-  
   return (
-    
     <div className="divi">
       <video src={video} autoPlay loop muted />
       <center>
@@ -83,6 +80,10 @@ const LoginPage = () => {
               <br>
               </br>
               <Button type="Submit" onClick={handleSubmit}>Login</Button>
+              &emsp;&emsp;&emsp;
+              <Link to="/lo">
+              <Button type="Submit" >Signup</Button>
+              </Link>
               <br></br>
               <div className="links">
                 <a href="#" style={{ color: "red" }}>Forgot Password?</a>

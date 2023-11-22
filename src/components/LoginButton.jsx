@@ -7,7 +7,7 @@ function LoginButton() {
     <div>
        <Link to="/login">
       <Button variant="contained" color="secondary">
-        LOGIN
+        Login  /  SignUp
       </Button>
        </Link>
         

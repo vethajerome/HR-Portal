@@ -153,7 +153,7 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav" color="secondary">
+      <AppBar component="nav" style={{backgroundColor:"#ad1098"}}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -220,10 +220,6 @@ function DrawerAppBar(props) {
 }
 
 DrawerAppBar.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
 
