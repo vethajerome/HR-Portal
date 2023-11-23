@@ -7,9 +7,11 @@ const Signup = () => {
   //usestate is used to update the state of the component
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
+  const [password1, setPassword1] = useState('');
   const [email,setEmail]=useState('');
   const [nameError, setNameError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
+  const [passwordError1, setPasswordError1] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const navigate=useNavigate();
  
@@ -25,6 +27,11 @@ const Signup = () => {
     } else {
       setPasswordError(false);
     }
+    if (!password1.trim()) {
+      setPasswordError1(true);
+    } else {
+      setPasswordError1(false);
+    }
     if (!email.trim()) {
       setEmailError(true);
     } else {
@@ -32,9 +39,9 @@ const Signup = () => {
     }
     //above four conditions checks the error.
     //instead of link tag using navigate.
-    if (name.trim() && password.trim()&&email.trim()) {
+    if (name.trim() && password.trim()&&email.trim()&&password1.trim()) {
       navigate("/login");
-      console.log("Submitted:", name, password,email);
+      console.log("Submitted:", name, password,email,password1);
     }
   }
   return (
@@ -110,13 +117,13 @@ const Signup = () => {
                 label="Confirm Password"
                 id="password"
                 type="password"
-                value={password}
-                error={passwordError}
+                value={password1}
+                error={passwordError1}
                 onChange={(event) => {
-                  setPassword(event.target.value);
-                  setPasswordError(false);
+                  setPassword1(event.target.value);
+                  setPasswordError1(false);
                 }}
-                helperText={passwordError ? "Please enter your confirm password" : ""}
+                helperText={passwordError1 ? "Please enter your confirm password" : ""}
                 />
                 <br>
                </br>

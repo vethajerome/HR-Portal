@@ -15,19 +15,16 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import { GiSwan } from "react-icons/gi";
+import { Card ,Stack,CardActionArea} from "@mui/material";
+
 
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Contact"];
 
 function DrawerAppBar(props) {
   const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
   const [selectedItem, setSelectedItem] = React.useState("");
-
-  const handleDrawerToggle = () => {
-    setMobileOpen((prevState) => !prevState);
-  };
-
   const handleNavItemClick = (item) => {
     setSelectedItem(item);
   };
@@ -37,6 +34,8 @@ function DrawerAppBar(props) {
       case "Home":
         return (
           <div className="home">
+            
+
             <Typography variant="h4" gutterBottom>
               Home
             </Typography>
@@ -60,6 +59,7 @@ function DrawerAppBar(props) {
               presence, an established business seeking to enhance your digital
               strategy, or anything in between, Swan is here to support you.
             </Typography>
+            
           </div>
         );
       case "About":
@@ -114,21 +114,40 @@ function DrawerAppBar(props) {
               Address:123 Main street,Cityville,India.
             </Typography>
           </div>
+        
         );
+        default:
+          return (
+           <Stack direction="row" spacing={40}>
+              <CardActionArea>
+            <Card className="hello">
 
-      default:
-        return <div>
-      
-        </div>;
-    }
+              hello
+            </Card>
+              </CardActionArea>
+              <CardActionArea>
+
+            <Card style={{width:"300px",height:"300px"}}>
+              hello
+            </Card>
+              </CardActionArea>
+              <CardActionArea>
+
+            <Card style={{width:"300px",height:"300px"}}>
+              hello
+            </Card>
+              </CardActionArea>
+         
+
+           </Stack>
+          )
+      }
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
-      <Divider />
+    <Box  sx={{ textAlign: "center" }}>
+
+      
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
@@ -155,21 +174,13 @@ function DrawerAppBar(props) {
       <CssBaseline />
       <AppBar component="nav" style={{backgroundColor:"#ad1098"}}>
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
+         <GiSwan style={{fontSize:"40px",color:"black"}}></GiSwan>
           <Typography
             variant="h6"
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-            Hello User
+          style={{color:"black"}}>
+            Royal Swan
           </Typography>
 
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
@@ -186,22 +197,7 @@ function DrawerAppBar(props) {
         </Toolbar>
       </AppBar>
       <nav>
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-            },
-          }}
-        >
+        <Drawer>
           {drawer}
         </Drawer>
       </nav>
@@ -210,6 +206,9 @@ function DrawerAppBar(props) {
         <center>
           <Typography variant="h4" color="silver">
             Welcome to Royal Swan
+            <pre>
+
+            </pre>
           </Typography>
           {renderContent()}
         </center>
