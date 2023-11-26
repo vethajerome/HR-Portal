@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "name": "Jerome",
+      "email": "dvethajerome@gmail.com",
+      "password": "$2a$10$/T63Y5DVl9NqhZXr8zF",
+      "id": 1
+    },
+    {
+      "name": "Rohinth",
+      "email": "jhgghjv",
+      "password": "m,nmnkj",
+      "id": 2
+    },
+    {
+      "name": "Rohinth",
+      "email": "727722euit149@skcet.ac.in",
+      "password": "wertty",
+      "id": 3
+    },
+    {
+      "name": "hjk",
+      "email": "hjkl",
+      "password": "hjk",
+      "id": 4
+    },
+    {
+      "name": "rhenius",
+      "email": "rhenius@gmail.com",
+      "password": "23345678",
+      "id": 5
+    },
+    {
+      "name": "Rohinth",
+      "email": "rohinth@gmail.com",
+      "password": "Rohinth@1234",
+      "id": 6
+    },
+    {
+      "name": "Rohinth",
+      "email": "rohinth@gmail.com",
+      "password": "Rhenius@1234",
+      "id": 7
+    },
+    {
+      "name": "Rhenius",
+      "email": "rhenius@gmail.com",
+      "password": "Rheni#1234",
+      "id": 8
+    },
+    {
+      "name": "Rohinth",
+      "email": "727722euit149@skcet.ac.in",
+      "password": "Rohi@2005",
+      "id": 9
+    }
+  ]
+}

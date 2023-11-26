@@ -12,7 +12,7 @@ video
 .div{
  
   width:400px;
-  height:550px;
+  height:480px;
 }
 .container 
 {
@@ -54,6 +54,7 @@ text-align: center;
   height:100vh;
   background-repeat: no-repeat;
   background-size:cover;
+
 }
 .photo
 {
@@ -64,10 +65,19 @@ text-align: center;
 .home
 {
   color: aqua;
+
 }
 .about
 {
   color: aqua;
+  width:400px;
+  height:300px;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+
 }
 .contact
 {
@@ -108,16 +118,6 @@ text-align: center;
   height:200px;
   width:200px;
 }
-.hello
-{
-  height:300px;
-  width: 300px; 
-  background-image: url("https://html.com/wp-content/uploads/flamingo.webp");
-background-size: cover;
-}
-
-
-
 .divin
 {
 width:100%;
@@ -132,9 +132,9 @@ videos
 }
 .divn{
  
-  width:430px;
+  width:470px;
 
-  height:750px;
+  height:680px;
 }
 .containers
 {

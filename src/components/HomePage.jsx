@@ -16,7 +16,9 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { GiSwan } from "react-icons/gi";
-import { Card ,Stack,CardActionArea} from "@mui/material";
+import { Card ,Stack,CardActionArea, Paper,CardContent,CardMedia} from "@mui/material";
+import { Link } from "react-router-dom";
+
 
 
 const drawerWidth = 240;
@@ -24,7 +26,7 @@ const navItems = ["Home", "About", "Contact"];
 
 function DrawerAppBar(props) {
   const { window } = props;
-  const [selectedItem, setSelectedItem] = React.useState("");
+  const [selectedItem, setSelectedItem] = React.useState("Home");
   const handleNavItemClick = (item) => {
     setSelectedItem(item);
   };
@@ -33,40 +35,128 @@ function DrawerAppBar(props) {
     switch (selectedItem) {
       case "Home":
         return (
+<center>
           <div className="home">
+
+          <Stack direction="row" spacing={15}>
+           
+           <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="230"
+          src="https://www.userful.com/hubfs/remote-worker-gif-1.gif"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+        <Link to="https://en.wikipedia.org/wiki/Human_resource_management" >
+            <Button style={{fontSize:"20px",color:"black"}}>
+            Hr Management
+        </Button>
+        </Link>
+            
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Recruitment & selection, performance management, tracking employees, succession planning, and HR data and analytics are considered cornerstones of effective HRM.
+          </Typography>
+        </CardContent>
+       
+        </CardActionArea>
+    </Card>
+    
+            
+           <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="230"
+       src="https://i.pinimg.com/originals/e3/52/6f/e3526f9d3757ec5610f24e25d4be4acc.gif"
+         
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            
+            <Link to="https://en.wikipedia.org/wiki/Tracking_software" >
+              <Button style={{fontSize:"20px",color:"black"}}>
+
+              Employee Tracking
+              </Button>
+              </Link>
+            
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+          By tracking employees' activities, HR can assess their productivity levels, identify any gaps in skills or training, and provide appropriate feedback and coaching to improve performance.
+
+‍
+          </Typography>
+        </CardContent>
+        </CardActionArea>
+    </Card>
             
 
-            <Typography variant="h4" gutterBottom>
-              Home
-            </Typography>
-            <Typography variant="body1" paragraph className="body1">
-              At Royal Swan, we are dedicated to delivering high-quality
-              solutions that meet the unique needs of our clients. Our
-              commitment to excellence drives us to provide innovative and
-              reliable services across various industries.Our company will be very engaged with your ideas.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              Our Services include:
-              <ul className="services-list">
-                <li>Web Development</li>
-                <li>Mobile App Development</li>
-                <li>Design and Branding</li>
-                <li>Consulting Services</li>
-              </ul>
-            </Typography>
-            <Typography variant="body1" paragraph>
-              Whether you are a startup looking to establish your online
-              presence, an established business seeking to enhance your digital
-              strategy, or anything in between, Swan is here to support you.
-            </Typography>
+           <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="230"
+          src="https://media.tenor.com/qImqU1qNlUwAAAAC/to-do-list-to-do.gif"
+         
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div" >
+            <Link to="https://en.wikipedia.org/wiki/Wikipedia:To-do_list">
+            <Button style={{fontSize:"20px",color:"black"}}>
+            To Do list
+            </Button>
+            </Link>
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+          HR checklist can ensure the company complies with applicable laws, with all required forms and documentation completed and filed.
+          </Typography>
+        </CardContent>
+        </CardActionArea>
+    </Card>
             
+           <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="230"
+          src="https://media0.giphy.com/media/ckaKTtBXT9QPiRrQwh/giphy.gif?cid=ecf05e47010rb498or6kkhx771nv83x10tpef2jw9lsq85su&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+         
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div" >
+            <Link to="https://en.wikipedia.org/wiki/Hiring">
+              <Button style={{fontSize:"20px",color:"black"}}>
+
+            Hiring
+              </Button>
+            </Link>
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+          Hiring process is the process of reviewing applications, selecting the right candidates to interview, testing candidates and performing various pre-employment tests and checks.
+          </Typography>
+        </CardContent>
+        </CardActionArea>
+    </Card>
+            
+
+              
+           </Stack>
+            
+
           </div>
+</center>
         );
       case "About":
         return (
           <div className="about">
             {" "}
             <Typography variant="h4" gutterBottom>
+              <br></br>
+              <br></br>
+              <br></br>
               About Us
             </Typography>
             <Typography variant="body1" paragraph className="body1">
@@ -88,6 +178,9 @@ function DrawerAppBar(props) {
               Whether you're looking for cutting-edge technology services or
               strategic consulting, Swan is your trusted partner for success.
             </Typography>
+
+
+            
           </div>
         );
       case "Contact":
@@ -116,34 +209,9 @@ function DrawerAppBar(props) {
           </div>
         
         );
-        default:
-          return (
-           <Stack direction="row" spacing={40}>
-              <CardActionArea>
-            <Card className="hello">
-
-              hello
-            </Card>
-              </CardActionArea>
-              <CardActionArea>
-
-            <Card style={{width:"300px",height:"300px"}}>
-              hello
-            </Card>
-              </CardActionArea>
-              <CardActionArea>
-
-            <Card style={{width:"300px",height:"300px"}}>
-              hello
-            </Card>
-              </CardActionArea>
-         
-
-           </Stack>
-          )
-      }
-  };
-
+        }
+      };
+      
   const drawer = (
     <Box  sx={{ textAlign: "center" }}>
 
@@ -204,7 +272,7 @@ function DrawerAppBar(props) {
       <Box component="main" sx={{ p: 3 }}>
         <Toolbar />
         <center>
-          <Typography variant="h4" color="silver">
+          <Typography variant="h4" color="silver" fontFamily={"oswald"}>
             Welcome to Royal Swan
             <pre>
 

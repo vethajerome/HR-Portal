@@ -12,16 +12,8 @@ const LoginPage = () => {
   const navigate=useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!name.trim()) {
-      setNameError(true);
-    } else {
-      setNameError(false);
-    }
-    if (!password.trim()) {
-      setPasswordError(true);
-    } else {
-      setPasswordError(false);
-    }
+      setNameError(!name.trim());
+      setPasswordError(!password.trim());
     //above four conditions checks the error.
     //instead of link tag using navigate.
     if (name.trim() && password.trim()) {
@@ -85,9 +77,9 @@ const LoginPage = () => {
               <Button type="Submit" >Signup</Button>
               </Link>
               <br></br>
-              <div className="links">
+              {/* <div className="links">
                 <a href="#" style={{ color: "red" }}>Forgot Password?</a>
-              </div>
+              </div> */}
             </center>
           </Paper>
         </div>
