@@ -35,8 +35,8 @@ function DrawerAppBar(props) {
     switch (selectedItem) {
       case "Home":
         return (
-<center>
-          <div className="home">
+
+         
 
           <Stack direction="row" spacing={15}>
            
@@ -94,7 +94,7 @@ function DrawerAppBar(props) {
     </Card>
             
 
-           <Card sx={{ maxWidth: 345 }}>
+           <Card sx={{ maxWidth: 375 }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -146,68 +146,190 @@ function DrawerAppBar(props) {
            </Stack>
             
 
-          </div>
-</center>
+          
+
         );
       case "About":
         return (
-          <div className="about">
-            {" "}
-            <Typography variant="h4" gutterBottom>
-              <br></br>
-              <br></br>
-              <br></br>
-              About Us
-            </Typography>
-            <Typography variant="body1" paragraph className="body1">
-              Royal Swan is a leading technology company dedicated to providing
-              innovative solutions to our clients. With a team of experienced
-              professionals, we strive to deliver excellence in every project we
-              undertake.Hope we will achieve our milestones.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              Our Approach:
-              <ul className="about-list">
-                <li>Client-Centric Solutions</li>
-                <li>Continuous Innovation</li>
-                <li>Commitment to Quality</li>
-                <li>Team Collaboration</li>
-              </ul>
-            </Typography>
-            <Typography variant="body1" paragraph>
-              Whether you're looking for cutting-edge technology services or
-              strategic consulting, Swan is your trusted partner for success.
-            </Typography>
+          
+        
+     
+          <Stack direction="row" spacing={40}>
+           
+           <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="220"
+          src="https://group.teamlease.com/wp-content/uploads/2021/09/2011-2015.jpg"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div" style={{fontSize:"24px",color:"black"}}>
+      
+            Company Past
+       
+            
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+          When the history of an organization comes up, it's usually in connection with an anniversary just part of the  investment of time and money would have little staying power.
+          </Typography>
+        </CardContent>
+       
+        </CardActionArea>
+    </Card>
+    
+            
+           <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="220"
+       src="https://www.pharmacyquality.com/wp-content/uploads/2020/12/achievements.jpg"
+         
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div" style={{fontSize:"24px",color:"black"}}>
+            
+           
 
+              Company Achievements
+              
+            
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+          Historical milestones and a variety of achievements characterize our company’s journey: from a merchant’s company selling one product to the global player we are today.
+‍
+          </Typography>
+        </CardContent>
+        </CardActionArea>
+    </Card>
+            
+
+          
+            
+           <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="220"
+          src="https://www.snapagency.com/wp-content/uploads/2022/12/iStock-1406742992-1024x590.jpg"
+         
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div" style={{fontSize:"24px",color:"black"}} >
+            Company Future
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+The future of your company is directly tied to the quality of the people that you can get, grow and keep on your team, which means that talent acquisition, talent development.</Typography>
+        </CardContent>
+        </CardActionArea>
+    </Card>
+            
+
+              
+           </Stack>
 
             
-          </div>
+
+          
+         
         );
       case "Contact":
         return (
-          <div className="about">
-            {" "}
-            <Typography variant="h4" gutterBottom>
-              Contact
-            </Typography>
-            <Typography variant="body1" paragraph className="body1">
-              At Swan Company, our unwavering commitment to our employees goes
-              beyond the conventional boundaries of employer-employee
-              relationships. We pride ourselves on fostering a workplace culture
-              that prioritizes the well-being and success of our team members.
-              We'd love to hear from you.Contact us through the following
-            </Typography>
-            <Typography variant="body1" paragraph>
-              Email:info@swan.com.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              Phone:+1 (555) 123-4567
-            </Typography>
-            <Typography variant="body1" paragraph>
-              Address:123 Main street,Cityville,India.
-            </Typography>
-          </div>
-        
+          <Stack direction="row" spacing={30}>
+           
+           <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="220"
+          src="https://cdn.create.vista.com/api/media/medium/17665009/stock-vector-phone-icon-button-red?token="
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div" style={{fontSize:"24px",color:"black"}}>
+      
+            Contact
+       
+            
+          </Typography>
+          <Typography variant="body2" color="text.secondary" >
+          +1 (555) 123-4567
+          </Typography>
+        </CardContent>
+       
+        </CardActionArea>
+    </Card>
+    
+            
+           <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="220"
+       src="https://previews.123rf.com/images/newartgraphics/newartgraphics1403/newartgraphics140300048/26529586-red-round-button-with-mail-icon.jpg"
+         
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div" style={{fontSize:"24px",color:"black"}}>
+            
+           
+
+              Email
+              
+            
+          </Typography>
+          <Typography variant="body2" color="text.secondary" >
+              info‍@swam.com
+          </Typography>
+        </CardContent>
+        </CardActionArea>
+    </Card>
+            
+
+          
+            
+           <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="220"
+          src="https://as2.ftcdn.net/v2/jpg/03/88/31/11/1000_F_388311162_mr7l1NfICAfXG39KUcxFkpfqUAsnCNXp.jpg"
+         
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div" style={{fontSize:"24px",color:"black"}} >
+            Location
+          </Typography>
+          <Typography variant="body2" color="text.secondary"  >
+              123 Main street,Cityville,India.
+</Typography>
+        </CardContent>
+        </CardActionArea>
+    </Card>
+            
+            
+           <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="220"
+          src="https://as2.ftcdn.net/v2/jpg/03/98/52/43/1000_F_398524323_Hqx2DbnLY7taBdFnJtcHYsBImd1aNBNV.jpg"
+         
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div" style={{fontSize:"24px",color:"black"}} >
+            Fax
+          </Typography>
+          <Typography variant="body2" color="text.secondary"  >
+          1-222-512-1234
+</Typography>
+        </CardContent>
+        </CardActionArea>
+    </Card>
+            
+
+              
+           </Stack>
         );
         }
       };

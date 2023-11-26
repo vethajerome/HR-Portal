@@ -4,7 +4,6 @@ import { Button, Paper, TextField } from "@mui/material";
 import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import useSignup from "./Hook";
-
 const SignupPage = () => {
   const signIn = useSignup();
 
@@ -18,13 +17,13 @@ const SignupPage = () => {
   const [emailError, setEmailError] = useState(false);
   const navigate = useNavigate();
   const validateEmail = (email) => {
-    // Email regex pattern for basic validation
+    
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
   const validatePassword = (password) => {
-    // Password regex pattern for basic validation (at least 8 characters)
-    const passwordRegex = /^(?=.*[!@#$%^&*(),.?":{}|<>])(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    const passwordRegex =
+    /^(?=.*[!@#$%^&*(),.?":{}|<>])(?=.*\d)(?=.*[a-zA-Z]).{8,}$/;
     return passwordRegex.test(password);
   };
   const handleSubmit = (event) => {
@@ -44,7 +43,6 @@ const SignupPage = () => {
       console.log("Submitted:", name, password, email, password1);
     }
   };
-
   return (
     <div className="divin">
       <video src={videos} autoPlay loop muted />
@@ -145,5 +143,4 @@ const SignupPage = () => {
     </div>
   );
 };
-
 export default SignupPage;

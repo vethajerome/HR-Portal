@@ -22,6 +22,7 @@ import GppMaybeIcon from '@mui/icons-material/GppMaybe';
 import TodoList from './Todolist';
 import Dummytable from './Dummytable';
 import Dummytable2 from './Dummytable2';
+import Name from '../components/Name';
 
 
 const drawerWidth = 240;
@@ -54,7 +55,7 @@ function ResponsiveDrawer(props) {
       case 4:
         return <div>NO SPAM AVAILABLE</div>;
         default:
-          return <div><i><Typography variant='h3'>Welcome HR for a wonderful day</Typography></i></div>
+          return <div><i><Typography variant='h3'>Welcome <Name></Name> for a wonderful day</Typography></i></div>
     }
   };
 
