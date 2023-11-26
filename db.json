@@ -53,6 +53,18 @@
       "email": "727722euit149@skcet.ac.in",
       "password": "Rohi@2005",
       "id": 9
+    },
+    {
+      "name": "END",
+      "email": "22it201@skcet.ac.in",
+      "password": "Meena@1975",
+      "id": 10
+    },
+    {
+      "name": "Vishnu",
+      "email": "Vishnuhp04@gmail.com",
+      "password": "Vishnu@2005",
+      "id": 11
     }
   ]
 }

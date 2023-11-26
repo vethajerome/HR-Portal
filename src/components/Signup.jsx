@@ -17,46 +17,26 @@ const SignupPage = () => {
   const [passwordError1, setPasswordError1] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const navigate = useNavigate();
-
   const validateEmail = (email) => {
     // Email regex pattern for basic validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
-
   const validatePassword = (password) => {
     // Password regex pattern for basic validation (at least 8 characters)
     const passwordRegex = /^(?=.*[!@#$%^&*(),.?":{}|<>])(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
     return passwordRegex.test(password);
   };
-
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    if (!name.trim()) {
-      setNameError(true);
-    } else {
-      setNameError(false);
-    }
-
-    if (!validatePassword(password)) {
-      setPasswordError(true);
-    } else {
-      setPasswordError(false);
-    }
-
-    if (password !== password1) {
-      setPasswordError1(true);
-    } else {
-      setPasswordError1(false);
-    }
-
+      setNameError(!name.trim());
+      setPasswordError(!validatePassword(password));
+      setPasswordError1(password !== password1);
     if (!validateEmail(email)) {
-      setEmailError(true);
+      setEmailError(!validateEmail(email));
     } else {
       setEmailError(false);
     }
-
     if (name.trim() && validatePassword(password) && password === password1 && validateEmail(email)) {
       // Perform signup logic here
       signIn.addUser();
