@@ -74,8 +74,35 @@ text-align: center;
 
 
 }
+.hello
+{
+  background-image:url("https://static.vecteezy.com/system/resources/previews/002/421/227/non_2x/purple-lavender-color-background-free-vector.jpg");
+  background-size: cover;
 
+ 
+}
+.hi
+{
+  background-image:url("https://wallpaperset.com/w/full/e/0/d/362655.jpg");
+  background-size: cover;
 
+}
+.shar
+{
+  background-color: rgb(5, 250, 217);
+  height:100vh;
+}
+.qwe
+{
+
+background-color:mediumorchid;
+height:100vh;
+}
+.cat
+{
+  background-image:url("https://img.freepik.com/free-vector/hand-painted-watercolor-abstract-watercolor-background_23-2149018547.jpg?w=996&t=st=1701069618~exp=1701070218~hmac=2ebf0746526f7e0867a29932387d3210f4dbdc3ce6b2588e943049fea9da37cf");
+  background-size: cover;
+}
 .contact
 {
   color: aqua;
@@ -167,4 +194,7 @@ text-align: center;
   height: auto;
   border-radius:70px;
 }
-
+.but{
+  text-decoration-color: aliceblue;
+ 
+}

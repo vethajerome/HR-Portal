@@ -18,7 +18,7 @@ const TodoList = () => {
   };
 
   return (
-    <div>
+    <div className='cat'>
       <h2  style={{color:"black"}}>To do List</h2>
       <table style={{ borderCollapse: 'collapse', width: '80%', margin: '20px' }}>
         <thead>

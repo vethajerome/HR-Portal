@@ -1,33 +1,31 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import video from "../assests/video.mp4";
 import { Button, Paper, TextField } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 import { useRef } from "react";
 import axios from "axios";
-import { useContext } from "react";
-import { userContext } from "./Context";
+import { Usercontext } from "./Usercontext";
 const LoginPage = () => {
+  const [user, setuser] = useContext(Usercontext);
   const [isnameFound, setname] = useState(true);
   const [isvalidPass, setPass] = useState(true);
-  const [user,setuser]=useContext(userContext);
   const navigate = useNavigate();
   const nameRef = useRef("");
   const passRef = useRef("");
   let username = "";
   let pass = "";
   const handleClick = () => {
-    
     if (nameRef.current.value.trim()) {
       axios
-        .get(`http://localhost:2008/users?name=${nameRef.current.value}`
-        )
+        .get(`http://localhost:2008/users?name=${nameRef.current.value}`)
         .then((response) => {
           if (response.data[0]) {
             setname(true);
             username = response.data[0].name;
             pass = response.data[0].password;
             if (passRef.current.value === pass) {
+              setuser(response.data[0].name);
               navigate("/dashboard");
             } else {
               setPass(false);
@@ -96,6 +94,7 @@ const LoginPage = () => {
         </div>
       </center>
     </div>
+    
   );
 };
 export default LoginPage;

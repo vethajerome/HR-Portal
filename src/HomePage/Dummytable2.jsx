@@ -11,7 +11,7 @@ import {
 
 const Dummytable = () => {
   return (
-    <div>
+    <div className="hi">
       <Table>
         <TableHead></TableHead>
         <TableBody>

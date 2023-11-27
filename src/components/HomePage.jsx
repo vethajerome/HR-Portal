@@ -44,7 +44,7 @@ function DrawerAppBar(props) {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="230"
+          height="200"
           src="https://www.userful.com/hubfs/remote-worker-gif-1.gif"
         />
         <CardContent>
@@ -69,7 +69,7 @@ function DrawerAppBar(props) {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="230"
+          height="200"
        src="https://i.pinimg.com/originals/e3/52/6f/e3526f9d3757ec5610f24e25d4be4acc.gif"
          
         />
@@ -98,7 +98,7 @@ function DrawerAppBar(props) {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="230"
+          height="200"
           src="https://media.tenor.com/qImqU1qNlUwAAAAC/to-do-list-to-do.gif"
          
         />
