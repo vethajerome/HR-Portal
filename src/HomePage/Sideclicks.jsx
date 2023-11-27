@@ -23,6 +23,8 @@ import TodoList from './Todolist';
 import Dummytable from './Dummytable';
 import Dummytable2 from './Dummytable2';
 import Name from '../components/Name';
+import { userContext } from '../components/Context';
+import { useContext } from 'react';
 
 
 const drawerWidth = 240;
@@ -31,6 +33,7 @@ function ResponsiveDrawer(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [selectedItem, setSelectedItem] = React.useState(null);
+  const [user,setuser]=useContext(userContext);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);

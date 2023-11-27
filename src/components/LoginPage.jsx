@@ -5,9 +5,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 import { useRef } from "react";
 import axios from "axios";
+import { useContext } from "react";
+import { userContext } from "./Context";
 const LoginPage = () => {
   const [isnameFound, setname] = useState(true);
   const [isvalidPass, setPass] = useState(true);
+  const [user,setuser]=useContext(userContext);
   const navigate = useNavigate();
   const nameRef = useRef("");
   const passRef = useRef("");
