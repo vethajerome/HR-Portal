@@ -22,17 +22,15 @@ import GppMaybeIcon from "@mui/icons-material/GppMaybe";
 import TodoList from "./Todolist";
 import Dummytable from "./Dummytable";
 import Dummytable2 from "./Dummytable2";
-import Name from "../components/Name";
 import { useContext } from "react";
 import { Usercontext } from "../components/Usercontext";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
-//import { colors } from "@material-ui/core";
 
 const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
-  const [user, setuser] = useContext(Usercontext);
+  const [user] = useContext(Usercontext);
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [selectedItem, setSelectedItem] = React.useState(null);
@@ -122,7 +120,6 @@ function ResponsiveDrawer(props) {
     <div className="qwe">
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
-        {/* navbar */}
         <AppBar
           position="fixed"
           sx={{
@@ -144,25 +141,24 @@ function ResponsiveDrawer(props) {
 
             <Typography variant="h6" noWrap component="div">
               <div className="but">
-              Dashboard &emsp;&emsp;&emsp;&emsp;
-              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-             
-  <Link to="/">
-
-                <Button ><p style={{color:"white"}}>Home</p></Button>
-              </Link>
-              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-              <Link to="/login">
-               
-
-                <Button ><p style={{color:"white"}}>Logout</p></Button>
-              
-              </Link>
-        </div>
+                Dashboard &emsp;&emsp;&emsp;&emsp;
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <Link to="/">
+                  <Button>
+                    <p style={{ color: "white" }}>Home</p>
+                  </Button>
+                </Link>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <Link to="/login">
+                  <Button>
+                    <p style={{ color: "white" }}>Logout</p>
+                  </Button>
+                </Link>
+              </div>
             </Typography>
           </Toolbar>
         </AppBar>
@@ -209,7 +205,6 @@ function ResponsiveDrawer(props) {
             flexGrow: 1,
             p: 3,
             width: { sm: `calc(100% - ${drawerWidth}px)` },
-            marginLeft: { sm:`${drawerWidth}px` },
           }}
         >
           <Toolbar />

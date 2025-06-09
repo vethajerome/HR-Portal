@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import videos from "../assests/videos.mp4";
 import { Button, Paper, TextField } from "@mui/material";
-import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import useSignup from "./Hook";
+
 const SignupPage = () => {
   const signIn = useSignup();
-
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [password1, setPassword1] = useState("");
@@ -16,57 +15,63 @@ const SignupPage = () => {
   const [passwordError1, setPasswordError1] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const navigate = useNavigate();
+
   const validateEmail = (email) => {
-    
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
+
   const validatePassword = (password) => {
     const passwordRegex =
-    /^(?=.*[!@#$%^&*(),.?":{}|<>])(?=.*\d)(?=.*[a-zA-Z]).{8,}$/;
+      /^(?=.*[!@#$%^&*(),.?":{}|<>])(?=.*\d)(?=.*[a-zA-Z]).{8,}$/;
     return passwordRegex.test(password);
   };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-      setNameError(!name.trim());
-      setPasswordError(!validatePassword(password));
-      setPasswordError1(password !== password1);
+    setNameError(!name.trim());
+    setPasswordError(!validatePassword(password));
+    setPasswordError1(password !== password1);
+
     if (!validateEmail(email)) {
       setEmailError(!validateEmail(email));
     } else {
       setEmailError(false);
     }
-    if (name.trim() && validatePassword(password) && password === password1 && validateEmail(email)) {
-      // Perform signup logic here
+
+    if (
+      name.trim() &&
+      validatePassword(password) &&
+      password === password1 &&
+      validateEmail(email)
+    ) {
       signIn.addUser();
       navigate("/login");
       console.log("Submitted:", name, password, email, password1);
     }
   };
+
   return (
     <div className="divin">
       <video src={videos} autoPlay loop muted />
       <center>
         <br></br>
-
         <div className="containers">
           <h1 style={{ color: "whitesmoke" }}>SIGNUP</h1>
-
           <Paper
             elevation={10}
             square
             className="divn"
             style={{ backgroundColor: "silver" }}
           >
-  
             <br></br>
             <div className="logo-containers">
               <img
                 src="https://as2.ftcdn.net/v2/jpg/01/68/67/29/1000_F_168672905_hxZBOpp8unSVPxT8XqZN6o6S8KTgRmJz.jpg"
                 className="logo-imgs"
+                alt="Signup logo"
               />
             </div>
-            
             <br></br>
             <TextField
               label="Username"
@@ -98,7 +103,6 @@ const SignupPage = () => {
             <br></br>
             <pre></pre>
             <br></br>
-
             <TextField
               label="Password"
               id="password"
@@ -109,7 +113,11 @@ const SignupPage = () => {
                 setPassword(event.target.value);
                 setPasswordError(false);
               }}
-              helperText={passwordError ? "Password must be atleast 8 character with one special case,one number,one Uppercase,one LowerCase" : ""}
+              helperText={
+                passwordError
+                  ? "Password must be atleast 8 character with one special case,one number,one Uppercase,one LowerCase"
+                  : ""
+              }
               inputRef={signIn.passRef}
             />
             <br></br>
@@ -130,10 +138,7 @@ const SignupPage = () => {
             <br></br>
             <pre></pre>
             <br></br>
-            <Button
-              type="Submit"
-              onClick={handleSubmit}
-            >
+            <Button type="Submit" onClick={handleSubmit}>
               Signup
             </Button>
             <br></br>
@@ -143,4 +148,5 @@ const SignupPage = () => {
     </div>
   );
 };
+
 export default SignupPage;
