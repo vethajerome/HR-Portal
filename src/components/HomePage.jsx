@@ -20,7 +20,6 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const drawerWidth = 240;
 const navItems = ["Home", "About", "Contact"];
 
 function DrawerAppBar(props) {
@@ -213,29 +212,6 @@ function DrawerAppBar(props) {
     }
   };
 
-  const drawer = (
-    <Box sx={{ textAlign: "center" }}>
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton
-              sx={{
-                textAlign: "center",
-                backgroundColor: selectedItem === item ? "#ccc" : "transparent",
-              }}
-              onClick={() => handleNavItemClick(item)}
-            >
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
-
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
-
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -261,9 +237,6 @@ function DrawerAppBar(props) {
           </Box>
         </Toolbar>
       </AppBar>
-      <nav>
-        <Drawer>{drawer}</Drawer>
-      </nav>
       <Box component="main" sx={{ p: 3 }}>
         <Toolbar />
         {renderContent()}
