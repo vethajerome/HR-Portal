@@ -6,6 +6,7 @@ import { Navigate } from "react-router-dom";
 import { useRef } from "react";
 import axios from "axios";
 import { Usercontext } from "./Usercontext";
+
 const LoginPage = () => {
   const [user, setuser] = useContext(Usercontext);
   const [isnameFound, setname] = useState(true);
@@ -15,6 +16,7 @@ const LoginPage = () => {
   const passRef = useRef("");
   let username = "";
   let pass = "";
+
   const handleClick = () => {
     if (nameRef.current.value.trim()) {
       axios
@@ -58,6 +60,7 @@ const LoginPage = () => {
               <img
                 src="https://as2.ftcdn.net/v2/jpg/01/68/67/29/1000_F_168672905_hxZBOpp8unSVPxT8XqZN6o6S8KTgRmJz.jpg"
                 className="logo-img"
+                alt="Login logo"
               />
             </div>
             <center>
@@ -94,7 +97,7 @@ const LoginPage = () => {
         </div>
       </center>
     </div>
-    
   );
 };
+
 export default LoginPage;
